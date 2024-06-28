@@ -1,0 +1,723 @@
+body {
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.zone {
+    cursor: pointer;
+    color: #070707;
+    font-size: 2em;
+    border: 0px solid #bbb;
+    transition: all 0.3s linear;
+}
+
+.zone:hover {
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.box>img {
+    width: 100%;
+}
+
+.box {
+    background-color: #ffffff;
+    padding: 130px;
+    margin: 20px;
+}
+
+.box:hover {
+    transform: rotate(10deg);
+}
+
+.unga {
+    text-align: center;
+    padding: 40px;
+    background-color: #febf04;
+    border-radius: 0px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form label {
+    margin: 10px 0 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 5px 0 10px;
+    border: 1px solid #bbb;
+    border-radius: 0px;
+}
+
+.contact-form button {
+    background-color: #798104;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #3071a9;
+}
+
+.nav-position {
+    top: 50px;
+    right: 10px;
+    left: 10px;
+}
+
+.main-nav {
+    display: flex;
+    list-style: none;
+    font-size: 0.7em;
+    margin: 10px 20px;
+    padding: 5px;
+}
+
+.push-right {
+    margin-left: auto;
+}
+
+.sticky {
+    position: fixed;
+    top: 14px;
+    width: calc(100% - 40px);
+    left: 15px;
+    z-index: 1000;
+}
+
+.nav-radius {
+    border-radius: 15px;
+}
+
+li {
+    padding: 10px 20px;
+}
+
+a {
+    color: #060606;
+    text-decoration: none;
+}
+
+.button a {
+    background-color: #ffcc00;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #333;
+}
+
+.green {
+    background: #56B870;
+    background: linear-gradient(top, #56B870 0%, #a5c956 100%);
+}
+
+.black {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    background: linear-gradient(top, #3b3e3c 0%, #040600 100%);
+}
+
+.white {
+    color: #ffffff;
+    background: rgb(0, 0, 0);
+}
+
+.red {
+    background: #C655BE;
+    background: linear-gradient(top, #C655BE 0%, #cf0404 100%);
+}
+
+.yellow {
+    background: #e5f388d8;
+    background: linear-gradient(top, #F3AAAA 0%, #febf04 100%);
+}
+
+.blue {
+    background: #ffffff;
+    color: #4096ee;
+    background: linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%);
+}
+
+@media only screen and (max-width: 600px) {
+    .main-nav {
+        font-size: 0.5em;
+        padding: 0;
+    }
+
+    .box {
+        padding: 60px;
+        margin: 10px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        max-width: 100%;
+    }
+
+    .nav-position {
+        top: 20px;
+        right: 5px;
+        left: 5px;
+    }
+
+    .nav-radius {
+        border-radius: 10px;
+    }
+
+    .recent-work-section h2 {
+        font-size: 1.5em;
+    }
+
+    .team-members {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .team-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .post-tiles {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.startup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    height: 100vh;
+}
+
+.startup .container {
+    z-index: 2;
+}
+
+.startup .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.startup .faded {
+    opacity: 0.8;
+}
+
+.startup h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.startup hr {
+    border-top: 2px solid #fff;
+    width: 50%;
+    margin: 20px auto;
+}
+
+.startup .btn {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #ffcc00;
+}
+
+.startup .btn-primary {
+    background-color: #ffcc00;
+    border: none;
+    color: rgb(0, 0, 0);
+    transition: background-color 0.3s;
+}
+
+.startup .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: auto;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 20px;
+}
+
+.zone1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 50px;
+}
+
+h1 {
+    margin: 40px;
+    font-size: 4em;
+}
+
+h3 {
+    margin: 1 0px;
+    padding-bottom: 10px;
+    font-size: 2em;
+    font-weight: normal;
+}
+
+.image1 {
+    width: 50%;
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    margin: 0px;
+}
+
+.custom-logo-section .text-content {
+    max-width: 60%;
+}
+
+.custom-logo-section .text-content h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.custom-logo-section .text-content p {
+    font-size: 1.2em;
+}
+
+.custom-logo-section .image-content img {
+    max-width: 70%;
+    padding-left: 140px;
+    border-radius: 5px;
+}
+
+.splgrey {
+    color: #64595972;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.smallblacktext {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+    padding: 10px;
+    line-height: 1.6;
+    border: 1px solid #ffffff;
+    margin-bottom: 10px;
+}
+
+.recent-work-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.recent-work-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.image-gallery img {
+    max-width: 18%;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.imgbrand {
+    padding: 20px 20px 20px 20px;
+    border-radius: 100px;
+    height: min-content;
+}
+
+.cover2 {
+    width: 80%;
+    height: 80%;
+    border-radius: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.team-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.team-section h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.team-members {
+    display: flex;
+    flex-direction: row; /* Ensure it's row by default */
+    justify-content: center;
+    gap: 140px; /* Adjust gap between team members */
+}
+
+.team-member {
+    text-align: center;
+    max-width: 200px;
+}
+
+.team-member img {
+    max-width: 100%;
+    border-radius: 50%;
+    height: auto;
+}
+
+.team-member h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.team-member p {
+    margin-top: 5px;
+    font-size: 1em;
+    color: gray;
+}
+
+.teamPerulu {
+    color: #ffcc00;
+    font-family: sans-serif;
+}
+
+.teamPeru {
+    color: #ffcc00;
+}
+
+.startup2 {
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    height: 100vh;
+}
+
+.sakha {
+    display: flex;
+    justify-content: center;
+    gap: 140px;
+}
+
+.company-team {
+    text-align: center;
+    padding: 20px;
+}
+
+.company-team h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 140px;
+}
+
+.team-mem {
+    text-align: center;
+    max-width: 200px;
+}
+
+.team-photo {
+    width: 100%;
+    height: auto;
+    margin-top: 150px;
+    aspect-ratio: 1 / 1;
+    border-radius: 30% / 30%;
+}
+
+.member-name {
+    margin-top: 50px;
+    font-size: 2em;
+}
+
+.member-role {
+    margin-top: 50px;
+    margin-bottom: 150px;
+    font-size: 1em;
+    color: gray;
+}
+
+.highlighted {
+    color: #00000084;
+    font-family: sans-serif;
+}
+
+.applepandu {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: auto;
+    border-radius: 0px;
+}
+
+.blog-posts {
+    text-align: center;
+    padding: 20px;
+}
+
+.blog-posts h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.post-tiles {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.post-tile {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 200px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.post-tile img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.post-tile h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.post-tile p {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.4;
+}
+
+.post-tile::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.post-tile:hover {
+    transform: translateY(-5px);
+}
+
+.post-tile:hover::before {
+    opacity: 1;
+}
+
+.blogtitle {
+    color: grey;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    font-size: 4em;
+    margin-left: 120px;
+    padding-bottom: 40px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.kanye {
+    max-width: 100%;
+    margin-right: 20px;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.text-content h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.text-content h3 {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+
+.custom-btn-xl {
+    background-color: yellow;  /* Change the background color to yellow */
+    color: black;  /* Change the text color to black for better contrast */
+    border: none;  /* Remove any default borders */
+    border-radius: 10px;  /* Add some border radius for rounded corners */
+    padding: 15px 30px;  /* Adjust padding for a better appearance */
+    font-size: 16px;  /* Adjust the font size */
+    cursor: pointer;  /* Change the cursor to pointer on hover */
+    transition: background-color 0.3s ease;  /* Add transition for hover effect */
+}
+
+.custom-btn-xl:hover {
+    background-color: gold;  /* Change the background color on hover */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pink-zone {
+    height: 100vh; /* Set height to 100% of viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Ensure positioning context for absolute elements */
+    background-color: #f5eded; /* Background color */
+}
+
+.pink-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 1; /* Ensure overlay is above the image */
+}
+
+
+.pink-heading {
+    font-size: 3rem;
+    margin-bottom: 2px;
+    color: #000; /* Set heading color to black */
+    font-weight: 200; /* Set font weight to thin (300 is typically considered thin) */
+    line-height: 1.2; /* Adjust line height for better spacing */
+    white-space: normal; /* Allow text to wrap */
+    text-align: center; /* Center align text */
+}
+
+
+.pink-button {
+    font-size: 1.2rem;
+    padding: 20px 30px;
+    border-radius: 40px;
+    background-color: yellow; /* Example background color */
+}
+
+.pink-image-container {
+    position: relative;
+    width: calc(100% - 80px); /* Ensure the container spans the full width minus padding */
+    height: calc(100% - 80px); /* Ensure the container spans the full height minus padding */
+    overflow: hidden; /* Ensure the image does not overflow */
+    padding: 40px; /* Add 40px padding all around */
+    box-sizing: border-box; /* Include padding in width and height calculation */
+    border-radius: 15px; /* Rounded corners */
+}
+
+.pink-image {
+    display: block;
+    width: 100%; /* Make the image fill the container horizontally */
+    height: 100%; /* Make the image fill the container vertically */
+    object-fit: cover; /* Cover the entire container with the image */
+    border-radius: 15px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.pink-image:hover {
+    transform: scale(1.1); /* Scale the image slightly on hover */
+}
